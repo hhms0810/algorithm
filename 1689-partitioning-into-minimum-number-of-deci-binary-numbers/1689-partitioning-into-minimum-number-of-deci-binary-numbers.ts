@@ -1,9 +1,10 @@
-function minPartitions(n: string): number {
+function minPartitions(nums: string): number {
     let answer = 0;
     
-    for (let i = 0, len = n.length; i < len; i++) {
-        if (answer < +n[i]) {
-            answer = +n[i];
+    for (let i = 0, len = nums.length; i < len; i++) {
+        const n = +nums[i];
+        if (answer < n) {
+            answer = n;
         }
     }
     
